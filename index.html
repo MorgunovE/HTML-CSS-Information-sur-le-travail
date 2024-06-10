@@ -2,6 +2,7 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta author="Morgunov Evgenii">
   <link rel="stylesheet" type="text/css" href="styles.css">
   <title>HTML-CSS-Information-sur-le-travail</title>
@@ -17,132 +18,156 @@
   </nav>
 </header>
 <main>
-  <section id="Eclipse">
+  <section id="Eclipse" class="ide-content">
     <img src="images/eclipse.jpg" alt="Eclipse IDE">
-    <h2>Eclipse</h2>
-    <h3>Principales fonctionnalités</h3>
-    <ul>
-      <li>Éditeur de code avancé : Supporte plusieurs langages de programmation, y compris Java, C++, PHP, et plus.</li>
-      <li>Plugins extensibles : Large écosystème de plugins pour ajouter des fonctionnalités supplémentaires.</li>
-      <!-- Add the rest of the features here -->
-    </ul>
-    <h3>Forces</h3>
-    <ul>
-      <li>Extensibilité : Hautement personnalisable grâce à un large éventail de plugins.</li>
-      <li>Communauté active : Grande communauté d'utilisateurs et de développeurs contribuant à des plugins et des améliorations.</li>
-      <!-- Add the rest of the strengths here -->
-    </ul>
-    <h3>Limites</h3>
-    <ul>
-      <li>Consommation de mémoire : Peut être gourmand en ressources, surtout avec de nombreux plugins installés.</li>
-      <li>Interface utilisateur datée : L'interface peut sembler moins moderne par rapport à d'autres IDE.</li>
-      <!-- Add the rest of the limitations here -->
-    </ul>
-    <button><a href="https://www.eclipse.org/downloads/" target="_blank">Télécharger</a></button>
-    <button><a href="#IDE">Retour au menu</a></button>
+    <div class="text-content">
+      <h2>Eclipse</h2>
+      <h3>Principales fonctionnalités</h3>
+      <ul>
+        <li><span>Éditeur de code avancé :</span> Supporte plusieurs langages de programmation, y compris Java, C++, PHP, et plus.</li>
+        <li><span>Plugins extensibles :</span> Large écosystème de plugins pour ajouter des fonctionnalités supplémentaires.</li>
+        <li><span>Outils de développement Java :</span> Offre des outils robustes pour le développement Java, y compris un débogueur intégré.</li>
+        <li><span>Gestion de projet :</span> Support pour Maven, Gradle, et autres outils de gestion de projets.</li>
+      </ul>
+      <h3>Forces</h3>
+      <ul>
+        <li><span>Extensibilité :</span> Hautement personnalisable grâce à un large éventail de plugins.</li>
+        <li><span>Communauté active :</span> Grande communauté d'utilisateurs et de développeurs contribuant à des plugins et des améliorations.</li>
+        <li><span>Gratuit et open-source :</span> Disponible gratuitement avec un accès complet au code source.</li>
+        <li><span>Support multi-langage :</span> Capable de gérer plusieurs langages de programmation et environnements de développement.</li>
+      </ul>
+      <h3>Limites</h3>
+      <ul>
+        <li><span>Consommation de mémoire :</span> Peut être gourmand en ressources, surtout avec de nombreux plugins installés.</li>
+        <li><span>Interface utilisateur datée :</span> L'interface peut sembler moins moderne par rapport à d'autres IDE.</li>
+        <li><span>Courbe d'apprentissage :</span> Peut être complexe à prendre en main pour les débutants.</li>
+      </ul>
+      <button><a href="https://www.eclipse.org/downloads/" target="_blank">Télécharger</a></button>
+      <button><a href="#IDE">Retour au menu</a></button>
+    </div>
   </section>
   <!-- Section #2 - Visual Studio IDE -->
-  <section id="VisualStudio">
+  <section id="VisualStudio" class="ide-content">
     <img src="images/Visual-Studio.jpg" alt="Visual Studio IDE" style="order: 2;">
+    <div class="text-content">
     <h2>Visual Studio</h2>
     <h3>Principales fonctionnalités</h3>
     <ul>
-      <li>Éditeur de code riche : Supporte C#, .NET, Python, JavaScript, et plus.</li>
-      <li>Débogueur intégré : Outils de débogage puissants et complets.</li>
-      <!-- Add the rest of the features here -->
+      <li><span>Éditeur de code riche :</span> Supporte C#, .NET, Python, JavaScript, et plus.</li>
+      <li><span>Débogueur intégré :</span> Outils de débogage puissants et complets.</li>
+      <li><span>Intégration Azure :</span> Support natif pour le développement et le déploiement sur Azure.</li>
+      <li><span>Conception d’interface utilisateur :</span> Outils de conception visuelle pour les applications Windows.</li>
+      <li><span>Tests unitaires :</span> Support intégré pour l'écriture et l'exécution de tests unitaires.</li>
     </ul>
     <h3>Forces</h3>
     <ul>
-      <li>Support complet pour .NET : Meilleur IDE pour le développement .NET et C#.</li>
-      <li>Outils professionnels : Offert avec de nombreux outils avancés pour les développeurs professionnels.</li>
-      <!-- Add the rest of the strengths here -->
+      <li><span>Support complet pour .NET :</span> Meilleur IDE pour le développement .NET et C#.</li>
+      <li><span>Outils professionnels :</span> Offert avec de nombreux outils avancés pour les développeurs professionnels.</li>
+      <li><span>Intégration parfaite avec Microsoft :</span> Excellente compatibilité avec les autres produits Microsoft.</li>
+      <li><span>Performant :</span> Rapide et stable, même pour les grands projets.</li>
     </ul>
     <h3>Limites</h3>
     <ul>
-      <li>Coût : Les versions professionnelles et entreprise peuvent être coûteuses.</li>
-      <li>Taille : Installation lourde et consomme beaucoup d'espace disque.</li>
-      <!-- Add the rest of the limitations here -->
+      <li><span>Coût :</span> Les versions professionnelles et entreprise peuvent être coûteuses.</li>
+      <li><span>Taille :</span> Installation lourde et consomme beaucoup d'espace disque.</li>
+      <li><span>Complexité :</span> Peut être excessif pour de petits projets ou des développeurs débutants.</li>
     </ul>
     <button><a href="https://visualstudio.microsoft.com/fr/downloads/" target="_blank">Télécharger</a></button>
     <button><a href="#IDE">Retour au menu</a></button>
+    </div>
   </section>
   
   <!-- Section #3 - IntelliJ IDEA IDE -->
-  <section id="IntelliJ">
+  <section id="IntelliJ" class="ide-content">
     <img src="images/IntelliJ-IDEA.jpg" alt="IntelliJ IDEA IDE">
-    <h2>IntelliJ IDEA</h2>
-    <h3>Principales fonctionnalités</h3>
-    <ul>
-      <li>Refactoring intelligent : Outils de refactoring avancés pour améliorer le code.</li>
-      <li>Assistance au codage : Suggestions de code, complétion automatique et détection d'erreurs en temps réel.</li>
-      <!-- Add the rest of the features here -->
-    </ul>
-    <h3>Forces</h3>
-    <ul>
-      <li>Productivité : Conçu pour maximiser la productivité du développeur avec de nombreuses fonctionnalités intelligentes.</li>
-      <li>Interface utilisateur moderne : Interface propre et intuitive.</li>
-      <!-- Add the rest of the strengths here -->
-    </ul>
-    <h3>Limites</h3>
-    <ul>
-      <li>Coût : La version Ultimate est payante et peut être coûteuse.</li>
-      <li>Consommation de ressources : Peut être gourmand en mémoire et CPU.</li>
-      <!-- Add the rest of the limitations here -->
-    </ul>
-    <button><a href="https://www.jetbrains.com/idea/download/" target="_blank">Télécharger</a></button>
-    <button><a href="#IDE">Retour au menu</a></button>
+    <div class="text-content">
+      <h2>IntelliJ IDEA</h2>
+      <h3>Principales fonctionnalités</h3>
+      <ul>
+        <li><span>Refactoring intelligent :</span> Outils de refactoring avancés pour améliorer le code.</li>
+        <li><span>Assistance au codage :</span> Suggestions de code, complétion automatique et détection d'erreurs en temps réel.</li>
+        <li><span>Support multi-langage :</span> Supporte Java, Kotlin, Groovy, Scala, et plus.</li>
+        <li><span>Intégration avec VCS :</span> Compatibilité avec Git, SVN, Mercurial, et autres.</li>
+        <li><span>Outils de débogage et test :</span> Débogueur intégré et outils de test robustes.</li>
+      </ul>
+      <h3>Forces</h3>
+      <ul>
+        <li><span>Productivité :</span> Conçu pour maximiser la productivité du développeur avec de nombreuses fonctionnalités intelligentes.</li>
+        <li><span>Interface utilisateur moderne :</span> Interface propre et intuitive.</li>
+        <li><span>Performances :</span> Rapide et réactif même pour les grands projets.</li>
+        <li><span>Plugins :</span> Large choix de plugins pour étendre les fonctionnalités.</li>
+      </ul>
+      <h3>Limites</h3>
+      <ul>
+        <li><span>Coût :</span> La version Ultimate est payante et peut être coûteuse.</li>
+        <li><span>Consommation de ressources :</span> Peut être gourmand en mémoire et CPU.</li>
+        <li><span>Complexité :</span> Peut être intimidant pour les nouveaux utilisateurs.</li>
+      </ul>
+      <button><a href="https://www.jetbrains.com/idea/download/" target="_blank">Télécharger</a></button>
+      <button><a href="#IDE">Retour au menu</a></button>
+    </div>
   </section>
   
   <!-- Section #4 - Visual Studio Code IDE -->
-  <section id="VSCode">
+  <section id="VSCode" class="ide-content">
     <img src="images/Visual-Studio-Code.jpg" alt="Visual Studio Code IDE" style="order: 2;">
+    <div class="text-content">
     <h2>Visual Studio Code</h2>
     <h3>Principales fonctionnalités</h3>
     <ul>
-      <li>Éditeur de code léger : Supporte plusieurs langages de programmation, y compris JavaScript, TypeScript, Python, PHP, et plus.</li>
-      <li>Extensions : Large écosystème d'extensions pour ajouter des fonctionnalités supplémentaires.</li>
-      <!-- Add the rest of the features here -->
+      <li><span>Éditeur de code léger :</span> Supporte plusieurs langages de programmation, y compris JavaScript, TypeScript, Python, PHP, et plus.</li>
+      <li><span>Extensions :</span> Large écosystème d'extensions pour ajouter des fonctionnalités supplémentaires.</li>
+      <li><span>Intégration Git :</span> Intégration native avec Git pour le contrôle de version.</li>
+      <li><span>Terminal intégré :</span> Terminal de ligne de commande intégré.</li>
+      <li><span>Débogage :</span> Outils de débogage intégrés pour plusieurs langages.</li>
     </ul>
     <h3>Forces</h3>
     <ul>
-      <li>Gratuit et open-source : Accessible à tous et soutenu par une grande communauté.</li>
-      <li>Léger et rapide : Conçu pour être léger et rapide, permettant une utilisation efficace des ressources.</li>
-      <!-- Add the rest of the strengths here -->
+      <li><span>Gratuit et open-source :</span> Accessible à tous et soutenu par une grande communauté.</li>
+      <li><span>Léger et rapide :</span> Conçu pour être léger et rapide, permettant une utilisation efficace des ressources.</li>
+      <li><span>Extensible :</span> Facile à personnaliser avec une vaste bibliothèque d'extensions.</li>
+      <li><span>Communauté active :</span> Large communauté de développeurs et de contributions.</li>
     </ul>
     <h3>Limites</h3>
     <ul>
-      <li>Pas aussi complet que les IDE lourds : Bien que très extensible, il peut ne pas avoir toutes les fonctionnalités d'un IDE complet par défaut.</li>
-      <li>Configuration nécessaire : Certaines fonctionnalités et extensions peuvent nécessiter une configuration supplémentaire.</li>
-      <!-- Add the rest of the limitations here -->
+      <li><span>Pas aussi complet que les IDE lourds :</span> Bien que très extensible, il peut ne pas avoir toutes les fonctionnalités d'un IDE complet par défaut.</li>
+      <li><span>Configuration nécessaire :</span> Certaines fonctionnalités et extensions peuvent nécessiter une configuration supplémentaire.</li>
+      <li><span>Interface simpliste :</span> Peut manquer d'outils visuels pour certains types de projets.</li>
     </ul>
     <button><a href="https://code.visualstudio.com/Download" target="_blank">Télécharger</a></button>
     <button><a href="#IDE">Retour au menu</a></button>
+    </div>
   </section>
   
   <!-- Section #5 – PyCharm IDE -->
-  <section id="PyCharm">
+  <section id="PyCharm" class="ide-content">
     <img src="images/PyCharm.jpg" alt="PyCharm IDE">
+    <div class="text-content">
     <h2>PyCharm</h2>
     <h3>Principales fonctionnalités</h3>
     <ul>
-      <li>Support Python avancé : Supporte le développement Python avec des fonctionnalités comme la complétion de code intelligente et le refactoring.</li>
-      <li>Support des frameworks web : Supporte les frameworks web Python comme Django et Flask.</li>
-      <!-- Add the rest of the features here -->
+      <li><span>Support Python avancé :</span> Supporte le développement Python avec des fonctionnalités comme la complétion de code intelligente et le refactoring.</li>
+      <li><span>Support des frameworks web :</span> Supporte les frameworks web Python comme Django et Flask.</li>
+      <li><span>Refactoring :</span> Outils puissants pour le refactoring de code Python.</li>
+      <li><span>Support des frameworks web : </span>Support intégré pour Django, Flask, et autres.</li>
+      <li><span>Intégration VCS : </span>Support Git, SVN, Mercurial, et plus.</li>
     </ul>
     <h3>Forces</h3>
     <ul>
-      <li>Optimisé pour Python : Conçu spécifiquement pour le développement Python, offrant une expérience optimisée.</li>
-      <li>Outils de productivité : Fournit de nombreux outils pour augmenter la productivité, comme le débogage, les tests et le support de VCS.</li>
-      <!-- Add the rest of the strengths here -->
+      <li><span>Optimisé pour Python : </span>Conçu spécifiquement pour le développement Python, offrant une expérience optimisée.</li>
+      <li><span>Outils de productivité : </span>Fournit de nombreux outils pour augmenter la productivité, comme le débogage, les tests et le support de VCS.</li>
+      <li><span>Support de tests : </span>Intégration avec les frameworks de test Python.</li>
+      <li><span>Débogage efficace : </span>Outils de débogage robustes et faciles à utiliser.</li>
     </ul>
     <h3>Limites</h3>
     <ul>
-      <li>Coût : La version professionnelle est payante.</li>
-      <li>Consommation de ressources : Peut être gourmand en mémoire et CPU, surtout pour de grands projets.</li>
-      <!-- Add the rest of the limitations here -->
+      <li><span>Coût : </span>La version professionnelle est payante.</li>
+      <li><span>Consommation de ressources : </span>Peut être gourmand en mémoire et CPU, surtout pour de grands projets.</li>
+      <li><span>Spécialisation : </span>Principalement axé sur Python, moins utile pour les développeurs multi-langages.</li>
     </ul>
     <button><a href="https://www.jetbrains.com/pycharm/download" target="_blank">Télécharger</a></button>
     <button><a href="#IDE">Retour au menu</a></button>
+    </div>
   </section>
 </main>
 <!-- Footer -->

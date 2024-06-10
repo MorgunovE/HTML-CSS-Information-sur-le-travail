@@ -9,16 +9,34 @@ header {
 }
 
 nav button {
-  background-color: #007bff;
   border: none;
   color: white;
-  padding: 15px 32px;
+  padding: 20px 40px; /* Increase padding to make buttons larger */
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
+  font-size: 20px; /* Increase font size to make text larger */
+  font-weight: bold; /* Make text bold */
+  margin: 10px 10px;
   cursor: pointer;
+  border-radius: 50px; /* Add border radius to make buttons round */
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* Add shadow to buttons */
+}
+
+nav button a {
+  text-decoration: none; /* Remove underline from text */
+  color: black; /* Change text color to white */
+}
+
+@keyframes shimmer {
+  0% { background-position: -468px 0; }
+  100% { background-position: 468px 0; }
+}
+
+button {
+  background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+  background-size: 800px 104px;
+  animation: shimmer 2s infinite;
 }
 
 main {
@@ -27,32 +45,72 @@ main {
 
 section {
   display: flex;
+  flex-direction: row; /* Arrange text and image side by side */
   justify-content: space-between;
   margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+section:nth-child(even) {
+  background-color: #f0f0f0; /* Change this to the color you want for even sections */
 }
 
 section img {
-  width: 50%;
+  border-radius: 15px; /* Make images round */
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Add shadow to images */
+  width: 40%;
   height: auto;
+  flex: 4;
 }
 
-section p {
-  width: 45%;
+section .text-content {
+  flex: 6;
+  padding: 0 60px;/* Text takes up 60% of the space */
+}
+
+section h2, section h3, section ul, section button {
+  order: 1; /* Arrange text from top to bottom line by line */
+}
+
+section ul {
+  list-style-type: decimal; /* Number the lists */
+}
+section .text-content button:last-child {
+  margin-left: 60px;
+}
+
+section ul li span {
+  font-weight: bold; /* Make the first sentence of the list bold */
 }
 
 section button {
-  background-color: #007bff;
   border: none;
-  color: white;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 20px;
   margin: 4px 2px;
   cursor: pointer;
+  border-radius: 50px; /* Make buttons round */
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* Add shadow to buttons */
+  order: 2; /* Place buttons at the bottom of the text */
 }
 
+section:nth-child(even) button {
+  background: white;
+  color: black;
+  background: linear-gradient(to right, #ffffff 8%, #dddddd 18%, #ffffff 33%);
+  background-size: 800px 104px;
+  animation: shimmer 2s infinite;
+}
+
+section button a {
+  font-weight: 600;
+  text-decoration: none; /* Remove underline from text */
+  color: black; /* Change text color to black */
+}
 footer {
   background-color: #f8f9fa;
   padding: 20px;
@@ -78,17 +136,7 @@ section:nth-child(even) p {
   order: 1;
 }
 
-@keyframes shimmer {
-  0% { background-position: -468px 0; }
-  100% { background-position: 468px 0; }
-}
 
-button {
-  background: #f6f7f8;
-  background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
-  background-size: 800px 104px;
-  animation: shimmer 2s infinite;
-}
 
 #backToTop {
   display: none; /* Hidden by default */
@@ -108,4 +156,43 @@ button {
 
 #backToTop:hover {
   background-color: #555; /* Add a dark-grey background on hover */
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 18px;
+  }
+
+  header, nav, main, footer {
+    padding: 20px;
+  }
+
+  nav button {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  section {
+    flex-direction: column;
+  }
+
+  section img, section p {
+    width: 100%;
+  }
+
+  section button {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  table, th, td {
+    font-size: 14px;
+  }
+
+  #backToTop {
+    bottom: 10px;
+    right: 10px;
+    padding: 10px;
+    font-size: 14px;
+  }
 }
