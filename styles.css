@@ -1,40 +1,65 @@
 body {
   font-family: Arial, sans-serif;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 header {
   background-color: #f8f9fa;
   padding: 20px;
   text-align: center;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
 }
 
-nav button {
-  border: none;
-  color: white;
-  padding: 20px 40px; /* Increase padding to make buttons larger */
+h1 {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 2.5em;
+  color: #333;
   text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 20px; /* Increase font size to make text larger */
-  font-weight: bold; /* Make text bold */
-  margin: 10px 10px;
-  cursor: pointer;
-  border-radius: 50px; /* Add border radius to make buttons round */
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* Add shadow to buttons */
+  margin-top: 40px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+  text-transform: capitalize;
 }
 
-nav button a {
-  text-decoration: none; /* Remove underline from text */
-  color: black; /* Change text color to white */
+h1:hover {
+  color: #666;
 }
 
 @keyframes shimmer {
-  0% { background-position: -468px 0; }
-  100% { background-position: 468px 0; }
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
 }
 
 button {
   background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+  background-size: 800px 104px;
+  animation: shimmer 2s infinite;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 50px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+button a {
+  text-decoration: none;
+  color: black;
+}
+
+nav button {
+  padding: 20px 40px;
+  margin: 10px 10px;
+  background: linear-gradient(to right, #ffffff 8%, #dddddd 18%, #ffffff 33%);
   background-size: 800px 104px;
   animation: shimmer 2s infinite;
 }
@@ -44,81 +69,64 @@ main {
 }
 
 section {
-  display: flex;
-  flex-direction: row; /* Arrange text and image side by side */
-  justify-content: space-between;
   margin-bottom: 20px;
   padding: 20px;
   border-radius: 15px;
 }
 
-section:nth-child(even) {
-  background-color: #f0f0f0; /* Change this to the color you want for even sections */
+.ide-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-section img {
-  border-radius: 15px; /* Make images round */
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Add shadow to images */
+section:nth-child(odd) {
+  background-color: #f0f0f0;
+}
+
+section:nth-child(odd) img  {
+  order: 2;
+}
+
+.ide-content img {
+  border-radius: 15px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
   width: 40%;
   height: auto;
-  flex: 4;
+  flex: 5;
 }
 
-section img:hover {
-  transform: scale(1.06); /* Agrandit l'image de 10% lorsqu'elle est survolée */
-  transition: transform 0.3s ease-in-out; /* Ajoute une transition pour rendre l'agrandissement plus doux */
+.ide-content img:hover {
+  transform: scale(1.06);
+  transition: transform 0.3s ease-in-out;
 }
 
-section .text-content {
-  flex: 6;
-  padding: 0 60px;/* Text takes up 60% of the space */
+.text-content {
+  flex: 5;
+  padding: 0 60px;
 }
 
-section h2, section h3, section ol, section button {
-  order: 1; /* Arrange text from top to bottom line by line */
-}
-
-section ol {
-  list-style-type: decimal; /* Number the lists */
-}
-section .text-content button:last-child {
+.text-content button:last-child {
   margin-left: 60px;
 }
 
 section ol li span {
-  font-weight: bold; /* Make the first sentence of the list bold */
+  font-weight: bold;
 }
 
 section button {
-  border: none;
   padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 20px;
   margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 50px; /* Make buttons round */
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1); /* Add shadow to buttons */
-  order: 2; /* Place buttons at the bottom of the text */
 }
 
-section:nth-child(even) button {
-  background: white;
-  color: black;
+section:nth-child(odd) button {
   background: linear-gradient(to right, #ffffff 8%, #dddddd 18%, #ffffff 33%);
   background-size: 800px 104px;
   animation: shimmer 2s infinite;
 }
 
-section button a {
-  font-weight: 600;
-  text-decoration: none; /* Remove underline from text */
-  color: black; /* Change text color to black */
-}
 footer {
-  background-color: #f8f9fa;
-  margin-top: 60px;
+  margin-top: 80px;
   padding: 40px 20px 60px 20px;
   text-align: center;
   border-radius: 15px;
@@ -128,15 +136,15 @@ table {
   width: 100%;
   border-collapse: separate;
   border-spacing: 0;
-  border-radius: 15px; /* Add rounded corners */
-  overflow: hidden; /* Hide the parts of the table that are outside the border-radius */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-  background-color: #f8f9fa; /* Light background color */
-  transition: all 0.3s ease; /* Add a transition for hover effects */
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #f8f9fa;
+  transition: all 0.3s ease;
 }
 
 table th, table td {
-  border: 1px solid #ddd; /* Light border color */
+  border: 1px solid #ddd;
   padding: 15px;
   text-align: left;
 }
@@ -148,45 +156,62 @@ table td:first-child {
 table th {
   background-color: #f0f0f0;
   text-align: center;
-  text-transform: uppercase;/* Light grey background for headers */
+  text-transform: uppercase;
 }
 
 table tr:nth-child(odd) {
-  background-color: #f2f2f2; /* Light grey background for even rows */
+  background-color: #f2f2f2;
 }
-
 
 table tr:hover {
-  background-color: #ddd; /* Darker grey background when hovering over a row */
-  transition: all 0.3s ease; /* Add a transition for hover effects */
+  background-color: #ddd;
+  transition: all 0.3s ease;
 }
 
-section:nth-child(even) img {
-  order: 2;
-}
-
-section:nth-child(even) p {
-  order: 1;
-}
 
 #backToTop {
-  display: none; /* Hidden by defaolt */
-  position: fixed; /* Fixed/sticky position */
-  bottom: 20px; /* Place the button at the bottom of the page */
-  right: 30px; /* Place the button 30px from the right */
-  z-index: 99; /* Make sure it does not overlap */
-  border: none; /* Remove borders */
-  outline: none; /* Remove outline */
-  background-color: #555; /* Dark background */
-  color: black; /* White text */
-  cursor: pointer; /* Add a mouse pointer on hover */
-  padding: 15px; /* Some padding */
-  border-radius: 10px; /* Rounded corners */
-  font-size: 18px; /* Increase font size */
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  outline: none;
+  background-color: #555;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 18px;
 }
 
 #backToTop:hover {
-  background-color: #555; /* Add a dark-grey background on hover */
+  background-color: #555;
+}
+
+@media screen and (max-width: 1024px) {
+  h1 {
+    margin-top: 60px;
+  }
+ nav {
+   max-width: 800px;
+   margin: 0 auto;
+ }
+  .ide-content {
+    flex-direction: column;
+    padding: 20px 40px;
+    margin: 40px 0;
+  }
+  .ide-content button {
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+
+  section:nth-child(odd) img  {
+    order: 0;
+  }
+
+  .ide-content img {
+    width: 100%;
+    margin: 20px auto;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -194,30 +219,43 @@ section:nth-child(even) p {
     font-size: 18px;
   }
 
-  header, nav, main, footer {
-    padding: 20px;
-  }
-
   nav button {
     padding: 10px;
     font-size: 14px;
   }
 
-  section {
+  .ide-content {
     flex-direction: column;
+    padding: 20px 20px;
+    margin: 20px 0;
   }
 
-  section img, section p {
+  .ide-content img {
     width: 100%;
+    margin: 0 auto;
+  }
+  .text-content {
+    padding: 20px 0 0 0;
   }
 
-  section button {
+  .text-content button:last-child {
+    margin-left: auto;
+  }
+  .text-content button {
+    padding: 20px;
+    font-size: 18px;
+    display: block;
+    margin: 40px auto;
+  }
+
+  table {
+    font-size: 12px;
+    overflow-x: auto;
+    display: block;
+  }
+
+  table th, table td {
     padding: 10px;
-    font-size: 14px;
-  }
-
-  table, th, td {
-    font-size: 14px;
   }
 
   #backToTop {
