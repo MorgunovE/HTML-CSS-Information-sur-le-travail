@@ -74,18 +74,18 @@ section .text-content {
   padding: 0 60px;/* Text takes up 60% of the space */
 }
 
-section h2, section h3, section ul, section button {
+section h2, section h3, section ol, section button {
   order: 1; /* Arrange text from top to bottom line by line */
 }
 
-section ul {
+section ol {
   list-style-type: decimal; /* Number the lists */
 }
 section .text-content button:last-child {
   margin-left: 60px;
 }
 
-section ul li span {
+section ol li span {
   font-weight: bold; /* Make the first sentence of the list bold */
 }
 
@@ -118,20 +118,47 @@ section button a {
 }
 footer {
   background-color: #f8f9fa;
-  margin-top: 100px;
-  padding: 20px;
+  margin-top: 60px;
+  padding: 40px 20px 60px 20px;
   text-align: center;
+  border-radius: 15px;
 }
 
 table {
   width: 100%;
-  border-collapse: collapse;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 15px; /* Add rounded corners */
+  overflow: hidden; /* Hide the parts of the table that are outside the border-radius */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  background-color: #f8f9fa; /* Light background color */
+  transition: all 0.3s ease; /* Add a transition for hover effects */
 }
 
-table, th, td {
-  border: 1px solid black;
+table th, table td {
+  border: 1px solid #ddd; /* Light border color */
   padding: 15px;
   text-align: left;
+}
+
+table td:first-child {
+  font-weight: 600;
+}
+
+table th {
+  background-color: #f0f0f0;
+  text-align: center;
+  text-transform: uppercase;/* Light grey background for headers */
+}
+
+table tr:nth-child(odd) {
+  background-color: #f2f2f2; /* Light grey background for even rows */
+}
+
+
+table tr:hover {
+  background-color: #ddd; /* Darker grey background when hovering over a row */
+  transition: all 0.3s ease; /* Add a transition for hover effects */
 }
 
 section:nth-child(even) img {
@@ -142,10 +169,8 @@ section:nth-child(even) p {
   order: 1;
 }
 
-
-
 #backToTop {
-  display: none; /* Hidden by default */
+  display: none; /* Hidden by defaolt */
   position: fixed; /* Fixed/sticky position */
   bottom: 20px; /* Place the button at the bottom of the page */
   right: 30px; /* Place the button 30px from the right */
